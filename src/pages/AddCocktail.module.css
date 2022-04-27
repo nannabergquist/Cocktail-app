@@ -1,0 +1,14 @@
+.goBack {
+    width: 5rem;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+#hideMain {
+    display: flex;
+}
+
+span {
+    font-size: 2rem;
+}

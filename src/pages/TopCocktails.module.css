@@ -1,0 +1,21 @@
+.articleAlldrinks {
+    border: 5px solid lightgrey;
+    color: darkslategrey;
+    padding: 3rem;
+}
+
+.articleAlldrinks>h2 {
+    font-size: 1.8rem;
+}
+
+.cocktailImg {
+    width: 50vh;
+    height: 50vh;
+}
+
+.goBack {
+    width: 5rem;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
