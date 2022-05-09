@@ -27,7 +27,7 @@ export default function ChooseCocktail() {
                         <img className={styles.goBack} src={arrow} alt="goBack" />
                     </Link>
                     <h2>Snurrhjulet</h2>
-                    <p>Svårt att välja vilken cocktail du vill dricka idag? Testa gärna snurrhjulet!</p>
+                    <p>Svårt att välja vilken cocktail du vill dricka idag? Testa gärna snurrhjulet för ideér!</p>
                     <section className={styles.containerSpinn} onClick={handleSpin}>
                         <button className={styles.spin} id="spin">Spin</button>
                         <span className={styles.arrow}></span>
