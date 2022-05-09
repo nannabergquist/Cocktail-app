@@ -16,44 +16,36 @@ export default function ChooseCocktail() {
     }
 
     const allDrinks = useSelector((state) => state.drinks)
-    console.log(allDrinks[0]);
+    console.log(allDrinks);
 
+    if (allDrinks) {
 
-    return (
-        <>
-            <Link to="/Cocktail">
-                <img className={styles.goBack} src={arrow} alt="goBack" />
-            </Link>
-            <h2>Snurrhjulet</h2>
-            <p>Svårt att välja vilken cocktail du vill dricka idag? Testa gärna snurrhjulet!</p>
-            <section className={styles.containerSpinn} onClick={handleSpin}>
-                <button className={styles.spin} id="spin">Spin</button>
-                <span className={styles.arrow}></span>
-                <div className={styles.container} id="container">
-                    <div className={styles.one}>1</div>
-                    <div className={styles.two}>2</div>
-                    <div className={styles.three}>3</div>
-                    <div className={styles.four}>4</div>
-                    <div className={styles.five}>5</div>
-                    <div className={styles.six}>6</div>
-                    <div className={styles.seven}>7</div>
-                    <div className={styles.eight}>8</div>
+        return (
+            <>
+                <div>
+                    <Link to="/Cocktail">
+                        <img className={styles.goBack} src={arrow} alt="goBack" />
+                    </Link>
+                    <h2>Snurrhjulet</h2>
+                    <p>Svårt att välja vilken cocktail du vill dricka idag? Testa gärna snurrhjulet!</p>
+                    <section className={styles.containerSpinn} onClick={handleSpin}>
+                        <button className={styles.spin} id="spin">Spin</button>
+                        <span className={styles.arrow}></span>
+                        <div className={styles.container} id="container">
+                            <div className={styles.one}>{allDrinks[0].strDrink}</div>
+                            <div className={styles.two}>{allDrinks[1].strDrink}</div>
+                            <div className={styles.three}>{allDrinks[2].strDrink}</div>
+                            <div className={styles.four}>{allDrinks[3].strDrink}</div>
+                            <div className={styles.five}>{allDrinks[4].strDrink}</div>
+                            <div className={styles.six}>{allDrinks[5].strDrink}</div>
+                            <div className={styles.seven}>{allDrinks[6].strDrink}</div>
+                            <div className={styles.eight}>{allDrinks[7].strDrink}</div>
+                        </div>
+                    </section>
                 </div>
-            </section>
-            {
-                allDrinks.map((cocktail, index) => (
-                    <div>
-                        <div className={styles.one} key={index}>{cocktail.strDrink}</div>
-                        <div className={styles.two}>{cocktail.strDrink}</div>
-                        <div className={styles.three}>{cocktail.strDrink}</div>
-                        <div className={styles.four}>{cocktail.strDrink}</div>
-                        <div className={styles.five}>{cocktail.strDrink}</div>
-                        <div className={styles.six}>{cocktail.strDrink}</div>
-                        <div className={styles.seven}>{cocktail.strDrink}</div>
-                        <div className={styles.eight}>{cocktail.strDrink}</div>
-                    </div>
-                ))
-            }
-        </>
-    )
+            </>
+        )
+    } else {
+        return null
+    }
 }
